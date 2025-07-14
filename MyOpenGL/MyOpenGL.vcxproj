@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b210f5a1-3a39-4ce8-8e79-93b00d93ac7a}</ProjectGuid>
+    <RootNamespace>MyOpenGL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependences\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4244;4305;4250;4005;4356</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependences\GLFW\lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependences\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4244;4305;4250;4005;4356</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependences\GLFW\lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependences\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4244;4305;4250;4005;4356</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependences\GLFW\lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependences\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4244;4305;4250;4005;4356</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependences\GLFW\lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\background\Star.cpp" />
+    <ClCompile Include="src\entity\abstract\AbstractEntity.cpp" />
+    <ClCompile Include="src\entity\abstract\camera\all_cameras.cpp" />
+    <ClCompile Include="src\entity\abstract\camera\Camera.cpp" />
+    <ClCompile Include="src\entity\abstract\ViewPoint.cpp" />
+    <ClCompile Include="src\entity\astronaut\all_astronauts.cpp" />
+    <ClCompile Include="src\entity\astronaut\Anon.cpp" />
+    <ClCompile Include="src\entity\astronaut\Astronaut.cpp" />
+    <ClCompile Include="src\entity\astronaut\Soyo.cpp" />
+    <ClCompile Include="src\entity\Entity.cpp" />
+    <ClCompile Include="src\entity\HitBox.cpp" />
+    <ClCompile Include="src\entity\astronaut\Player.cpp" />
+    <ClCompile Include="src\entity\planet\all_planet.cpp" />
+    <ClCompile Include="src\entity\SpaceCraft.cpp" />
+    <ClCompile Include="src\geometry\Ball.cpp" />
+    <ClCompile Include="src\geometry\Box.cpp" />
+    <ClCompile Include="src\geometry\BoxWithBorder.cpp" />
+    <ClCompile Include="src\geometry\Cone.cpp" />
+    <ClCompile Include="src\geometry\Cuboid.cpp" />
+    <ClCompile Include="src\geometry\Cylinder.cpp" />
+    <ClCompile Include="src\geometry\Pyramid.cpp" />
+    <ClCompile Include="src\geometry\Ring.cpp" />
+    <ClCompile Include="src\geometry\Stick.cpp" />
+    <ClCompile Include="src\manager\BackgroundManager.cpp" />
+    <ClCompile Include="src\manager\CameraManager.cpp" />
+    <ClCompile Include="src\manager\LightManager.cpp" />
+    <ClCompile Include="src\manager\RenderManager.cpp" />
+    <ClCompile Include="src\manager\TextureManager.cpp" />
+    <ClCompile Include="src\math\CEuler.cpp" />
+    <ClCompile Include="src\math\CMatrix.cpp" />
+    <ClCompile Include="src\math\CQuaternion.cpp" />
+    <ClCompile Include="src\entity\planet\Planet.cpp" />
+    <ClCompile Include="src\entity\planet\Saturn.cpp" />
+    <ClCompile Include="src\geometry\Geometry.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\manager\InputManager.cpp" />
+    <ClCompile Include="src\manager\EntityManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\constant\BackgroundConstant.h" />
+    <ClInclude Include="src\constant\CameraConstant.h" />
+    <ClInclude Include="src\constant\Color.h" />
+    <ClInclude Include="src\constant\Constant.h" />
+    <ClInclude Include="src\constant\EntityConstant.h" />
+    <ClInclude Include="src\constant\GeometryConstant.h" />
+    <ClInclude Include="src\entity\abstract\AbstractEntity.h" />
+    <ClInclude Include="src\entity\abstract\camera\all_cameras.h" />
+    <ClInclude Include="src\entity\abstract\camera\Camera.h" />
+    <ClInclude Include="src\entity\abstract\camera\CameraBase.h" />
+    <ClInclude Include="src\entity\abstract\camera\DefaultCamera.h" />
+    <ClInclude Include="src\entity\abstract\camera\PlayerCamera.h" />
+    <ClInclude Include="src\entity\abstract\camera\SpaceCraftCamera.h" />
+    <ClInclude Include="src\entity\abstract\ViewPoint.h" />
+    <ClInclude Include="src\entity\astronaut\all_astronauts.h" />
+    <ClInclude Include="src\entity\astronaut\Anon.h" />
+    <ClInclude Include="src\entity\astronaut\Astronaut.h" />
+    <ClInclude Include="src\entity\astronaut\AstronautBase.h" />
+    <ClInclude Include="src\entity\astronaut\Soyo.h" />
+    <ClInclude Include="src\entity\Entity.h" />
+    <ClInclude Include="src\entity\HitBox.h" />
+    <ClInclude Include="src\entity\astronaut\Player.h" />
+    <ClInclude Include="src\entity\planet\all_planet.h" />
+    <ClInclude Include="src\entity\planet\Earth.h" />
+    <ClInclude Include="src\entity\planet\Jupiter.h" />
+    <ClInclude Include="src\entity\planet\Mars.h" />
+    <ClInclude Include="src\entity\planet\Mercury.h" />
+    <ClInclude Include="src\entity\planet\Moon.h" />
+    <ClInclude Include="src\entity\planet\Neptune.h" />
+    <ClInclude Include="src\entity\planet\PlanetBase.h" />
+    <ClInclude Include="src\entity\planet\Sun.h" />
+    <ClInclude Include="src\entity\planet\Uranus.h" />
+    <ClInclude Include="src\entity\planet\Venus.h" />
+    <ClInclude Include="src\entity\SpaceCraft.h" />
+    <ClInclude Include="src\background\Star.h" />
+    <ClInclude Include="src\geometry\Ball.h" />
+    <ClInclude Include="src\geometry\Box.h" />
+    <ClInclude Include="src\geometry\BoxWithBorder.h" />
+    <ClInclude Include="src\geometry\Cone.h" />
+    <ClInclude Include="src\geometry\Cuboid.h" />
+    <ClInclude Include="src\geometry\Cylinder.h" />
+    <ClInclude Include="src\geometry\Pyramid.h" />
+    <ClInclude Include="src\geometry\Ring.h" />
+    <ClInclude Include="src\geometry\Stick.h" />
+    <ClInclude Include="src\manager\BackgroundManager.h" />
+    <ClInclude Include="src\manager\CameraManager.h" />
+    <ClInclude Include="src\manager\LightManager.h" />
+    <ClInclude Include="src\manager\RenderManager.h" />
+    <ClInclude Include="src\manager\TextureManager.h" />
+    <ClInclude Include="src\math\CEuler.h" />
+    <ClInclude Include="src\math\CMatrix.h" />
+    <ClInclude Include="src\math\CQuaternion.h" />
+    <ClInclude Include="src\math\CVector.h" />
+    <ClInclude Include="src\entity\planet\Planet.h" />
+    <ClInclude Include="src\entity\planet\Saturn.h" />
+    <ClInclude Include="src\geometry\Geometry.h" />
+    <ClInclude Include="src\manager\InputManager.h" />
+    <ClInclude Include="src\manager\EntityManager.h" />
+    <ClInclude Include="src\math\CVector2.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
